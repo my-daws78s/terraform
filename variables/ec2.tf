@@ -1,9 +1,6 @@
 # resource <resource-type> <resource-name>
-# Inside tag the name its used for ec2, it can be different than terraform resource-name 
 
 resource "aws_security_group" "allow_tls" {
-
-  #name and description are optional u can see in documentation terraform ec2
   name        = "allow_tls"
   description = "Allow TLS inbound traffic and all outbound traffic"
 
