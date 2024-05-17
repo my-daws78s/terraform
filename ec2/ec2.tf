@@ -28,9 +28,9 @@ resource "aws_security_group" "allow_tls" {
 }
 
 resource "aws_instance" "db-instance" {
-  ami           = "ami-090252cbe067a9e58"
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  instance_type = "t2.micro"
+  ami           = "ami-090252cbe067a9e58" #required field
+  vpc_security_group_ids = [aws_security_group.allow_tls.id] #optional
+  instance_type = "t2.micro" #required field
 
   tags = {
     Name = "db"

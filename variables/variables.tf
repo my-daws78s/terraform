@@ -1,3 +1,8 @@
+#Preference of variables printed...
+#1. command line
+#2. tfvars
+#3. default values
+
 #ami           = "ami-090252cbe067a9e58"
 #vpc_security_group_ids = [aws_security_group.allow_tls.id]
 #instance_type = "t2.micro"
@@ -39,5 +44,6 @@ variable "protocol" {
     default = "tcp"
 }
 variable "allowed_cidr" {
+    type = list(string)
     default = ["0.0.0.0/0"]
 }

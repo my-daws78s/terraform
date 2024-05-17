@@ -8,7 +8,7 @@ resource "aws_instance" "db-instance" {
   #instance_type = "t2.micro" #required field
   instance_type = var.instance_type
 
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
   tags = {
     Name = "db"
